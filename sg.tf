@@ -11,7 +11,7 @@ resource "aws_security_group" "sg_ssh_eti" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [ data.external.localinterface.result.ip ]
+    cidr_blocks = [data.external.localinterface.result.ip]
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_security_group" "sg_ping_eti" {
     from_port   = -1
     to_port     = -1
     protocol    = "icmp"
-    cidr_blocks = [ data.external.localinterface.result.ip ] #[ data.external.localinterface.result.ip ]
+    cidr_blocks = [data.external.localinterface.result.ip] #[ data.external.localinterface.result.ip ]
   }
 }
 
